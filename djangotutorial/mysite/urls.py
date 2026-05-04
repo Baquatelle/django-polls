@@ -1,3 +1,7 @@
+"""
+Main URL configuration for the mysite project.
+"""
+
 from django.contrib import admin
 from django.urls import include, path
 
