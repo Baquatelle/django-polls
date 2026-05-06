@@ -4,11 +4,30 @@ Views for the polls application.
 
 from django.db.models import F
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
+from django.contrib.auth import login
+from .forms import RegisterForm
 
 from .models import Choice, Question
+
+
+def register(request):
+    """
+    Handle user registration using the custom RegisterForm.
+    If the request is POST, validate the form, save the user (using email as username),
+    log the user in, and redirect to the index page.
+    """
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("polls:index")
+    else:
+        form = RegisterForm()
+    return render(request, "registration/register.html", {"form": form})
 
 
 class IndexView(generic.ListView):
