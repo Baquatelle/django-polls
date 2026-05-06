@@ -1,3 +1,18 @@
+<nav>
+    {% if user.is_authenticated %}
+        <p>Logged in as: {{ user.email }}</p>
+        <form action="{% url 'logout' %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a> | 
+        <a href="{% url 'polls:register' %}">Register</a>
+    {% endif %}
+</nav>
+
+<hr>
+
 {% if latest_question_list %}
 <ul>
     {% for question in latest_question_list %}
