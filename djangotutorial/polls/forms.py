@@ -1,3 +1,7 @@
+"""
+Forms for the polls application, including a custom registration form.
+"""
+
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
@@ -17,9 +21,7 @@ class RegisterForm(UserCreationForm):
         fields = ("email",)
 
     def save(self, commit=True):
-        """
-        Save the provided email as the username.
-        """
+        """Save the provided email as the username and email field."""
         user = super().save(commit=False)
         user.username = self.cleaned_data["email"]
         user.email = self.cleaned_data["email"]
