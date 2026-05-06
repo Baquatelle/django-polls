@@ -16,7 +16,7 @@ class RegisterForm(UserCreationForm):
         required=True, help_text="Required. A valid email address."
     )
 
-    class Meta(UserCreationForm.Meta):
+    class Meta(UserCreationForm.Meta):  # type: ignore
         model = User
         fields = ("email",)
 
