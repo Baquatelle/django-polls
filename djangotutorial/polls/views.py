@@ -8,6 +8,7 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm
 
 from .models import Choice, Question
@@ -61,6 +62,7 @@ class ResultsView(generic.DetailView):
     template_name = "polls/results.html"
 
 
+@login_required
 def vote(request, question_id):
     """
     Handle voting for a particular choice in a specific question.
