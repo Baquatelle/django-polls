@@ -55,7 +55,7 @@ ROOT_URLCONF = "mysite.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "polls" / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -66,6 +66,11 @@ TEMPLATES = [
         },
     },
 ]
+
+# Authentication settings
+# Redirect to index page after login/logout
+LOGIN_REDIRECT_URL = "polls:index"
+LOGOUT_REDIRECT_URL = "polls:index"
 
 WSGI_APPLICATION = "mysite.wsgi.application"
 
