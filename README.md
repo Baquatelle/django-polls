@@ -35,7 +35,7 @@ An extension of the official Django tutorial polls app, adding user authenticati
 | User registration | ✅ Working |
 | Login / Logout | ✅ Working |
 | Bootstrap shared layout (`base.html`) | ✅ Working |
-| Vote view (`@login_required`) | ⚠️ Login guard in place — choices not working |
+| Vote view (`@login_required`) | ✅ Working |
 | Personal Voting History ("My Votes") | ❌ Not implemented |
 | Double-vote prevention (`UserVote` model) | ❌ Not implemented |
 
