@@ -79,7 +79,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Visit `http://127.0.0.1:8000/` — you will be redirected to `/polls/`.
+Visit https://baquatelle.pythonanywhere.com/polls/ — you will be redirected to `/polls/`.
 
 ---
 
