@@ -1,4 +1,4 @@
-# uds-cc1-wup — Django Polls Extension
+# Django Polls Extension
 
 **Team Alfa - Coding Camp 1 - Warmup Project**
 
@@ -45,7 +45,7 @@ An extension of the official Django tutorial polls app, adding user authenticati
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/Baquatelle/uds-cc1-wup.git
+git clone https://github.com/Baquatelle/django-polls.git
 cd uds-cc1-wup
 ```
 
