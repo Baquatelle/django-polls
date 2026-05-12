@@ -46,7 +46,7 @@ An extension of the official Django tutorial polls app, adding user authenticati
 
 ```bash
 git clone https://github.com/Baquatelle/django-polls.git
-cd uds-cc1-wup
+cd django-polls
 ```
 
 ### 2. Create and activate a virtual environment
