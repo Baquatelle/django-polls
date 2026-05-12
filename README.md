@@ -39,36 +39,6 @@ An extension of the official Django tutorial polls app, adding user authenticati
 | Personal Voting History ("My Votes") | ❌ Not implemented |
 | Double-vote prevention (`UserVote` model) | ❌ Not implemented |
 
----
-
-## Project Structure
-
-```
-uds-cc1-wup/
-├── manage.py
-├── requirements.txt
-├── .gitignore
-├── wup/                          # Django project config
-│   ├── settings.py               # LOGIN_REDIRECT_URL, LOGOUT_REDIRECT_URL
-│   └── urls.py                   # /accounts/ auth routes, / → /polls/ redirect
-└── polls/                        # Main app
-    ├── models.py                 # Question & Choice (tutorial)
-    ├── views.py                  # vote() with @login_required, register()
-    ├── urls.py                   # URL patterns including /register/
-    ├── forms.py                  # RegisterForm (email as username)
-    ├── admin.py
-    ├── tests_auth.py             # Auth unit + functional tests
-    ├── AUTH_TEST_PLAN.md         # Full test case checklist
-    └── templates/
-        └── polls/
-            ├── index.html        # Navbar: authenticated/unauthenticated states
-            ├── base.html         # Shared Bootstrap layout
-            └── registration/
-                ├── login.html
-                └── register.html
-```
-
----
 
 ## Setup
 
